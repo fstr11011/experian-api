@@ -10,7 +10,7 @@ var request = require("request");
 router.use(bodyParser());
 
 router.get("/", function(req, res, next){
-    res = "You are connected";
+    res.status(200);
 });
 
 router.get("/listZipCodeData", function(req, res, next){
