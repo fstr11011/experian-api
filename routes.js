@@ -17,7 +17,7 @@ router.get("/", function(req, res, next){
 
 router.get("/listZipCodeData", function(req, res, next){
     ZipCodeData.find({})
-            .sort({ZipCode: 1})
+            .sort({zipCode: 1})
             .exec(function(err, info){
                 if(err) return next(err);
                 res.json(info);
