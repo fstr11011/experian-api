@@ -3,7 +3,7 @@
 var express = require("express");
 var router = express.Router();
 var config = require("./config");
-var ZipCodeData = require("./experian_model").UserInfo;
+var ZipCodeData = require("./experian_model").ZipCodeData;
 var bodyParser = require("body-parser").json;
 var request = require("request");
 
