@@ -35,6 +35,7 @@ router.get("/search/:zipcode", function(req, res, next){
         });
 });
 
+//return data of zipcodes with leads over specified value
 router.get("/over/:leads", function(req, res, next){
     ZipCodeData.where('leads').gt(req.params.leads).exec(function(err, data){
         if(err) return next(err);
@@ -42,6 +43,29 @@ router.get("/over/:leads", function(req, res, next){
     });
 });
 
+//top 3 documents
+router.get("/top3", function(req, res, next){
+    ZipCodeData.find().sort({leads: -1}).limit(3).exec(function(err, data){
+        if(err) return next(err);
+        res.json(data);
+    });
+});
+
+//top 5 documents
+router.get("/top5", function(req, res, next){
+    ZipCodeData.find().sort({leads: -1}).limit(5).exec(function(err, data){
+        if(err) return next(err);
+        res.json(data);
+    });
+});
+
+//top 10 documents
+router.get("/top10", function(req, res, next){
+    ZipCodeData.find().sort({leads: -1}).limit(10).exec(function(err, data){
+        if(err) return next(err);
+        res.json(data);
+    });
+});
 
 //post new data for a zipcode
 router.post("/newZipCodeData", function(req, res, next){
