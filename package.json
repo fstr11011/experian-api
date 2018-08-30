@@ -4,8 +4,8 @@
   "description": "",
   "main": "experian_model.js",
   "scripts": {
-    "test": "node index.js",
-    "start": "node index.js"
+    "start": "node index.js",
+    "test": "node index.js"
   },
   "repository": {
     "type": "git",
