@@ -3,11 +3,15 @@
 var express = require("express");
 var router = express.Router();
 var config = require("./config");
-var UserInfo = require("./models").UserInfo;
+var ZipCodeData = require("./experian_model").UserInfo;
 var bodyParser = require("body-parser").json;
 var request = require("request");
 
 router.use(bodyParser());
+
+router.get("/", function(req, res, next){
+    res = "You are connected";
+});
 
 router.get("/listZipCodeData", function(req, res, next){
     ZipCodeData.find({})
