@@ -4,43 +4,43 @@ var mongoose = require("mongoose");
 var Schema = mongoose.Schema;
 
 var ZipCodeDataSchema = new Schema({
-    zipCode: Int,
-    startDate: DateTime,
-    endDate: DateTime,
-    leads: Int,
-    singleFamilyLeads: Int,
-    multiFamilyLeads: Int,
+    zipCode: Number,
+    startDate: Date,
+    endDate: Date,
+    leads: Number,
+    singleFamilyLeads: Number,
+    multiFamilyLeads: Number,
     maritalStatus: {
-        married: Int,
-        single: Int,
-        unknown: Int
+        married: Number,
+        single: Number,
+        unknown: Number
     },
     gender: {
-        male: Int,
-        female: Int,
-        unknown: Int 
+        male: Number,
+        female: Number,
+        unknown: Number 
     },
     ageRange: {
-        twenties: Int,
-        thirties: Int,
-        fourties: Int,
-        fifties: Int,
-        sixtiesPlus: Int
+        twenties: Number,
+        thirties: Number,
+        fourties: Number,
+        fifties: Number,
+        sixtiesPlus: Number
     },
     income: {
-        tier1: Int,
-        tier2: Int,
-        tier3: Int,
-        tier4: Int,
-        tier5: Int,
-        tier6: Int,
-        tier7: Int,
-        tier8: Int,
-        tier9: Int,
-        tier10: Int,
-        tier11: Int,
-        tier12: Int,
-        unknown: Int
+        tier1: Number,
+        tier2: Number,
+        tier3: Number,
+        tier4: Number,
+        tier5: Number,
+        tier6: Number,
+        tier7: Number,
+        tier8: Number,
+        tier9: Number,
+        tier10: Number,
+        tier11: Number,
+        tier12: Number,
+        unknown: Number
     }
 });
 
