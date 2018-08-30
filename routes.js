@@ -26,7 +26,7 @@ router.get("/listZipCodeData", function(req, res, next){
 
 router.post("/newZipCodeData", function(req, res, next){
     var inData = new ZipCodeData(req.body);
-    inData.save(function(err, user){
+    inData.save(function(err, inData){
         if(err) return next(err);
         res.status(201);
         res.json(inData);
