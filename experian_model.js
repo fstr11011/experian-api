@@ -5,6 +5,8 @@ var Schema = mongoose.Schema;
 
 var ZipCodeDataSchema = new Schema({
     zipCode: Int,
+    startDate: DateTime,
+    endDate: DateTime,
     leads: Int,
     singleFamilyLeads: Int,
     multiFamilyLeads: Int,
