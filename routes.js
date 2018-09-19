@@ -35,7 +35,7 @@ router.get("/search/:zipcode", function(req, res, next){
         });
 });
 
-//return data of zipcodes with leads over specified value
+//return data of zipcodes with leads over a specified value
 router.get("/over/:leads", function(req, res, next){
     ZipCodeData.where('leads').gt(req.params.leads).exec(function(err, data){
         if(err) return next(err);
@@ -76,5 +76,18 @@ router.post("/newZipCodeData", function(req, res, next){
         res.json(inData);
     });
 });
+
+/**
+ * This will allow a custom form request to be sent to the UiPath
+ * Orchestrator. A JSON of the form is the request which will be
+ * sent to the orchestrator. The result will be sent back to the
+ * wbesite to confirm it has succesfully gone through. The process
+ * that is kicked off will send an email as well at the beginning/end
+ * of the process.
+ */
+
+// router.get("/customForm", function(req, res, next){
+    
+// })
 
 module.exports = router;
